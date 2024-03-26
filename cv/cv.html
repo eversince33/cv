@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Oribias - CV/Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000; /* Changed background color to black */
+            color: #fff;
+        }
+        .header {
+            background-image: url('trippy.jpg'); /* Added trippy image as background */
+            background-size: cover;
+            color: #fff;
+            padding: 20px;
+            text-align: left; /* Align text to the left */
+            margin-bottom: 30px;
+            display: flex; /* Added flex display for alignment */
+            align-items: center; /* Center vertically */
+            justify-content: flex-start; /* Align content to the left */
+        }
+        .profile-img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-right: 20px; /* Add some right margin for spacing */
+        }
+        .section-title {
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .section-title:hover {
+            color: #ff0000ec;
+        }
+        .section-content {
+            margin-bottom: 20px;
+            background-color: #000;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .section-content.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <img src="cv.png" alt="Your Photo" class="profile-img"> <!-- Align the image to the left -->
+            <h1>Christian Oribias</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <!-- About section -->
+                <div class="section">
+                    <h2 class="section-title" onclick="toggleContent('about-details')">About</h2>
+                    <div id="about-details" class="section-content">
+                        <p>
+
+                            I practice programming and freelance news writing on crypto. Also into weightlifting.</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-title" onclick="toggleContent('education-details')">Education</h2>
+                    <div id="education-details" class="section-content show">
+                        <p>Bachelor of Science in Information Technology - Ateneo de Davao University, 2022</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-title" onclick="toggleContent('projects-details')">Projects</h2>
+                    <div id="projects-details" class="section-content">
+                        <p>
+
+                             Davao Legionnaires Landing Page - A landing page designed in Figma for the sports team, Davao Legionnaires.
+                            
+                              </p>
+                        <p>Spotify Clone - An offline version of Spotify made with HTML, CSS, and JavaScript.</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-title" onclick="toggleContent('skills-details')">Skills</h2>
+                    <div id="skills-details" class="section-content">
+                        <p>HTML, CSS, JavaScript</p>
+                        <p>Bootstrap, Python </p>
+                        <p>GitHub, Figma </p>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-title" onclick="toggleContent('affiliations-details')">Affiliations</h2>
+                    <div id="affiliations-details" class="section-content">
+                        <p>Member of ACCSS (Ateneo Circle of Computer Studies Students)</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2 class="section-title" onclick="toggleContent('research-details')">Research</h2>
+                    <div id="research-details" class="section-content">
+                        <p>Automation and AI: Ethical, Social, and Economic Impacts - , 2020</p>
+                        <p>Thesis Defense - Philippine Womens College of Davao, 2020</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <!-- Details content will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+            } else {
+                content.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>
